@@ -26,7 +26,7 @@ const token = async () => {
 
 const airports = async (name: string, page: number = 1) => {
     const _token = await token()
-    const response = await axios.get(`${process.env.AMADEUS_API_TEST_URL}/reference-data/locations`, {
+    const response = await axios.get(`${process.env.AMADEUS_API_TEST_URL}/v1/reference-data/locations`, {
         params: {
             keyword: name,
             subType: "CITY,AIRPORT",
@@ -39,8 +39,36 @@ const airports = async (name: string, page: number = 1) => {
 
     return response.data
 }
+type ICriteria = {
+    originLocationCode: string,
+    destinationLocationCode: string,
+    departureDate: string
+    returnDate?: string
+    adults: number
+    children?: number
+    infants?: number
+    travelClass?: "ECONOMY"|"PREMIUM_ECONOMY"|"BUSINESS"|"FIRST"
+    includedAirlineCodes?: string
+    excludedAirlineCodes?: string
+    nonStop?: boolean
+    currencyCode?: string
+    maxPrice?: number
+    max?: number
+}
+const deals = async (criteria: ICriteria) => {
+    const _token = await token()
+    const response = await axios.get(`${process.env.AMADEUS_API_TEST_URL}v2/shopping/flight-offers`, {
+        params: {...criteria},
+        headers: {
+            'Authorization': 'Bearer ' + _token.access_token
+        }
+    });
+
+    return response.data
+}
 
 module.exports = {
     token,
-    airports
+    airports,
+    deals
 }
