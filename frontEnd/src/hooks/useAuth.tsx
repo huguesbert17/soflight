@@ -1,19 +1,28 @@
 import axios from "axios";
+import {encrypt, decrypt} from "../utils/Encryption";
+import useLocalStorage from "./useLocalStorage";
+import {Exception} from "sass";
 
 
 const useAuth = () => {
+    const {get, set} = useLocalStorage()
 
     const getToken = async () => {
-        //This will be replaced to use on-server request
-        const url: string = process.env.REACT_APP_AMADEUS_AUTH_API_URL ? process.env.REACT_APP_AMADEUS_AUTH_API_URL : ""
-        const token = await axios.post(url, {
-            "grant_type": "client_credentials",
-            "client_id": process.env.REACT_APP_AMADEUS_API_KEY,
-            "client_secret": process.env.REACT_APP_AMADEUS_API_SECRET
-        })
-        console.log(token);
+        const storage: string|null|undefined = get("apiToken")
+
+        if (storage) return JSON.parse(decrypt(storage))
+
+        try {
+            const token = await axios.get("http://localhost:3001/api/token")
+
+            set("apiToken", encrypt(JSON.stringify(token.data.data)), token.data.data.expires_in)
+
+            return token.data.data
+        }catch (e) {
+            throw new Error("Something went wrong try again later.")
+        }
     }
 
-    return {getToken}
+    return { getToken }
 }
 export default useAuth

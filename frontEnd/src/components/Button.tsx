@@ -99,7 +99,7 @@ export const TwinButtons: FC<ITwin> = (props) => {
             left: `${left}px`,
             width: `${first.offsetWidth + 6}px`
         })
-    }, [])
+    }, [props])
 
     const handleClick = (e: any, index: number) => {
         let params: any = {}

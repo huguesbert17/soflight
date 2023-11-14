@@ -25,7 +25,10 @@ interface IProps {
 const NavBar: FC<IProps> = (props: IProps) => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     return <Fragment>
-        <Box bg={"white"} px={8} as="header" backgroundColor={"rgba(255, 255, 255, 0.4)"}backdropFilter={"saturate(180%) blur(20px)"} zIndex={9} position="fixed" w="100%"  >
+        <Box bg={"white"} px={8} as="header" backgroundColor={{
+            md: "rgba(255, 255, 255, 0.4)",
+            base: "rgba(255, 255, 255, 0.9)"
+        }} backdropFilter={"saturate(180%) blur(20px)"} zIndex={9} position="fixed" w="100%"  >
             <Flex h={20} alignItems={'center'} justifyContent={"space-between"} height={{md: "3rem"}}>
                 <IconButton size={'md'} icon={isOpen ? <CloseIcon /> : <HamburgerIcon />} aria-label={'Open Menu'} display={{ md: 'none' }} onClick={isOpen ? onClose : onOpen}/>
                 <Box>
@@ -47,7 +50,11 @@ const NavBar: FC<IProps> = (props: IProps) => {
             {isOpen ? (
                 <Box pb={4} display={{ md: 'none' }}>
                     <Stack as={'nav'} spacing={4}>
-                        <NavLink to="Home">Home</NavLink>
+                        <Link _hover={{color: "brand.gray", textDecoration: "none"}} as={NavLink} to="/flights">Flights</Link>
+                        <Link _hover={{color: "brand.gray", textDecoration: "none"}} as={NavLink} to="/stays">Stays</Link>
+                        <Link _hover={{color: "brand.gray", textDecoration: "none"}} as={NavLink} to="/cars">Cars</Link>
+                        <Link _hover={{color: "brand.gray", textDecoration: "none"}} as={NavLink} to="/Cruises">Cruises</Link>
+                        <Link _hover={{color: "brand.gray", textDecoration: "none"}} as={NavLink} to="/flight-tracker">Flight tracker</Link>
                     </Stack>
                 </Box>
             ) : null}

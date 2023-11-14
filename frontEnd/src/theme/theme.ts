@@ -7,6 +7,14 @@ const theme = extendTheme({
     },
     input: {
         borderColor: "#dadce0"
+    },
+    brand: {
+        primary: {
+            500: "#eca13e",
+        },
+        secondary: {
+            500: "#66ade7",
+        }
     }
 })
 

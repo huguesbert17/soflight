@@ -1,9 +1,12 @@
-import React, {FC} from "react";
+import React, {FC, Fragment, useRef, useState} from "react";
 import Hero from "./Hero";
-import {AbsoluteCenter, Box, Button, Center, Container, Flex, Image, Text, VStack} from "@chakra-ui/react";
+import {AbsoluteCenter, Box, Button, Container, Flex, Image, Text, VStack} from "@chakra-ui/react";
 import square from "../../assets/img/squares-bg.svg"
 import styled from "styled-components";
 import bgRadial from "../../assets/img/bgRadial.png"
+import vacation from "../../assets/img/vacation.jpg"
+import SuggestedDestination from "./SuggestedDestination";
+import planeTrack from "../../assets/img/plane-track.svg";
 
 const UnderText = styled(Box)`
   width: 45%;
@@ -54,21 +57,35 @@ interface IProps {
 }
 
 const Home: FC<IProps> = (props: IProps) => {
-    return <>
-        <Box position="relative">
-            <Hero/>
+    const [heroPadding, setHeroPadding] = useState<number>(0),
+        pricePanelRef = useRef<any>()
+
+
+    const handleScheduling = () => {
+        if (pricePanelRef.current) window.scrollTo({
+            top: pricePanelRef.current.offsetTop,
+            behavior: "smooth"
+        })
+    }
+
+    return <Fragment>
+        <Box position="relative" ref={pricePanelRef}>
+            <Hero heroPadding={padding => setHeroPadding(padding)}/>
         </Box>
-        <Box bg="gray.50">
-            <Container py={28} maxW="container.xl" w="full" id="pricing" pos={"relative"}>
-                <VStack mx="auto" textAlign={"center"} mb={10} w={{base: "100%", md: "55%"}}>
+        <Box bg="gray.50" position="relative">
+            <AbsoluteCenter background={`url(${planeTrack}) no-repeat center`} backgroundSize={"cover"} backgroundPosition={"center"} width={"full"} height={"100%"}
+            style={{opacity: ".1"}} zIndex={"-1"}/>
+            <Container py={28} style={{paddingBottom: "80px"}} maxW="container.xl" w="full" pos={"relative"}>
+                <VStack mx="auto" textAlign={"center"} w={{base: "100%", md: "55%"}} pt={`${heroPadding}px`}>
                     <Box pos={"absolute"} w={"full"} h={"full"} backgroundImage={bgRadial} bgRepeat={"no-repeat"} mixBlendMode={"darken"} bgSize={"cover"} bgPosition={"center center"} bgAttachment={"scroll"}
                     />
                     <Text as={'h2'} pb={"25px"} lineHeight={1.3}
-                          fontSize={{ base: "30px", md: "50px" }} fontWeight={800}>Flexible pricing for agency and individual.</Text>
-                    <Text fontSize={"22px"} fontWeight={600} lineHeight={1.3}>Get started today with a annual or monthly plan or try for free. No credit card required.</Text>
+                          fontSize={{ base: "30px", md: "50px" }} fontWeight={800}>Flexible pricing for your unplanned vacation.</Text>
+                    <Text fontSize={"22px"} fontWeight={600} lineHeight={1.3}>Whether your vacation is planned or don't have any idea on where to go, the price will be the same and cheaper.</Text>
                 </VStack>
             </Container>
         </Box>
+
 
         <Box py={8} position="relative">
             <Flex flexDirection={{
@@ -78,30 +95,34 @@ const Home: FC<IProps> = (props: IProps) => {
                     <Box>
                         <Square w="full" backgroundImage={square}/>
                         <UnderText/>
-                        <Text fontWeight={500} mb={3} fontSize={{ base: "18px", md: "21px", lg: "25px" }}>Limitless, but structured and intelligent</Text>
-                        <Text>Choose from pre-designed templates or start from scratch using our intuitive drag-and-drop Email Editor. Easily add your brand content, images, links, and videos to your emails. Our templates are optimized and responsive across all devices and email clients, so your emails will always look perfect.</Text>
+                        <Text fontWeight={500} mb={3} fontSize={{ base: "18px", md: "21px", lg: "25px" }}>Unplanned, no problem, we propose!</Text>
+                        <Text>
+                            Want to get the party started but don't know where? Our AI can plan amazing trips and find you great deals in minutes. All you have to do is ask, and boom, your flight is scheduled!
+                        </Text>
                         <Button
                             fontSize={{base:"15px",md:"16px",lg:"17px"}}
-                            className="btn-signup"
                             size="md"
-                            mt={4}
-                            variant={"brand"}>
-                            Get started
+                            colorScheme='blue' onClick={handleScheduling}
+                            mt={4} mb={4}>
+                            Schedule now
                         </Button>
                     </Box>
                 </Flex>
-                <Hue color="#f87cf1" zIndex="-1"/>
-                <Image w={{
-                    base: "100%",
-                    md: "50%"
-                }}
-                       borderRadius={20}
-                       borderColor="gray.200"
-                       boxShadow="lg"
-                       src="/images/2200-05-17113517.png"/>
+                <Hue color="#f87cf1" zIndex=""/>
+                <Box height={`250px`}>
+                    <Image w={{
+                        base: "100%",
+                        md: "60%"
+                    }}
+                           borderRadius={20}
+                           borderColor="gray.200"
+                           boxShadow="lg"
+                           src={vacation}/>
+                </Box>
             </Flex>
         </Box>
-    </>
+        <SuggestedDestination/>
+    </Fragment>
 }
 
 export default Home
