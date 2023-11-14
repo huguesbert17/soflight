@@ -55,8 +55,9 @@ type ICriteria = {
     maxPrice?: number
     max?: number
 }
-const deals = async (criteria: ICriteria) => {
+const deals = async (criteria: ICriteria, cabinClass = ["ECONOMY", "PREMIUM_ECONOMY", "BUSINESS", "FIRST"]) => {
     const _token = await token()
+
     const response = await axios.get(`${process.env.AMADEUS_API_TEST_URL}v2/shopping/flight-offers`, {
         params: {...criteria},
         headers: {
@@ -66,9 +67,45 @@ const deals = async (criteria: ICriteria) => {
 
     return response.data
 }
+const confirmOffer = async (offer: any) => {
+    const _token = await token()
+
+    const response = await axios.post(`${process.env.AMADEUS_API_TEST_URL}v1/shopping/flight-offers/pricing`, {
+        data: {
+            type: "flight-offers-pricing",
+            flightOffers: [offer]
+        }
+    }, {
+        headers: {
+            'Authorization': 'Bearer ' + _token.access_token,
+            'X-HTTP-Method-Override': 'POST'
+        }
+    });
+
+    return response.data
+}
+const bookFlight = async (offer: any) => {
+    const _token = await token()
+
+    const response = await axios.post(`${process.env.AMADEUS_API_TEST_URL}v1/booking/flight-orders`, {
+        data: {
+            type: "flight-order",
+            ...offer
+        }
+    }, {
+        headers: {
+            'Authorization': 'Bearer ' + _token.access_token,
+            'X-HTTP-Method-Override': 'POST'
+        }
+    });
+
+    return response
+}
 
 module.exports = {
     token,
     airports,
-    deals
+    deals,
+    confirmOffer,
+    bookFlight
 }

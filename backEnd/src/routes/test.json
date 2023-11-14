@@ -4,7 +4,7 @@
     "meta": {
       "count": 10,
       "links": {
-        "self": "https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=MIA&destinationLocationCode=DTW&adults=1&departureDate=2023-11-11&currencyCode=USD&max=10"
+        "self": "https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=MIA&destinationLocationCode=ROA&adults=1&departureDate=2023-11-13&returnDate=2023-12-21&currencyCode=USD&max=10"
       }
     },
     "data": [
@@ -15,170 +15,100 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-11-11",
-        "lastTicketingDateTime": "2023-11-11",
+        "lastTicketingDate": "2023-11-13",
+        "lastTicketingDateTime": "2023-11-13",
         "numberOfBookableSeats": 3,
         "itineraries": [
           {
-            "duration": "PT17H57M",
+            "duration": "PT7H39M",
             "segments": [
               {
                 "departure": {
                   "iataCode": "MIA",
-                  "at": "2023-11-11T06:00:00"
+                  "at": "2023-11-13T10:15:00"
                 },
                 "arrival": {
-                  "iataCode": "DEN",
-                  "at": "2023-11-11T08:30:00"
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-11-13T12:05:00"
                 },
-                "carrierCode": "F9",
-                "number": "615",
+                "carrierCode": "DL",
+                "number": "2836",
                 "aircraft": {
-                  "code": "32N"
+                  "code": "757"
                 },
                 "operating": {
-                  "carrierCode": "F9"
+                  "carrierCode": "DL"
                 },
-                "duration": "PT4H30M",
-                "id": "17",
+                "duration": "PT1H50M",
+                "id": "5",
                 "numberOfStops": 0,
                 "blacklistedInEU": false
               },
               {
                 "departure": {
-                  "iataCode": "DEN",
-                  "at": "2023-11-11T19:04:00"
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-11-13T16:20:00"
                 },
                 "arrival": {
-                  "iataCode": "DTW",
-                  "terminal": "N",
-                  "at": "2023-11-11T23:57:00"
+                  "iataCode": "ROA",
+                  "at": "2023-11-13T17:54:00"
                 },
-                "carrierCode": "F9",
-                "number": "624",
+                "carrierCode": "DL",
+                "number": "5247",
                 "aircraft": {
-                  "code": "32N"
+                  "code": "CR9"
                 },
-                "operating": {
-                  "carrierCode": "F9"
-                },
-                "duration": "PT2H53M",
-                "id": "18",
+                "duration": "PT1H34M",
+                "id": "6",
                 "numberOfStops": 0,
                 "blacklistedInEU": false
               }
             ]
-          }
-        ],
-        "price": {
-          "currency": "USD",
-          "total": "169.64",
-          "base": "130.04",
-          "fees": [
-            {
-              "amount": "0.00",
-              "type": "SUPPLIER"
-            },
-            {
-              "amount": "0.00",
-              "type": "TICKETING"
-            }
-          ],
-          "grandTotal": "169.64"
-        },
-        "pricingOptions": {
-          "fareType": [
-            "PUBLISHED"
-          ],
-          "includedCheckedBagsOnly": false
-        },
-        "validatingAirlineCodes": [
-          "F9"
-        ],
-        "travelerPricings": [
+          },
           {
-            "travelerId": "1",
-            "fareOption": "STANDARD",
-            "travelerType": "ADULT",
-            "price": {
-              "currency": "USD",
-              "total": "169.64",
-              "base": "130.04"
-            },
-            "fareDetailsBySegment": [
-              {
-                "segmentId": "17",
-                "cabin": "ECONOMY",
-                "fareBasis": "T00VXP5",
-                "class": "T"
-              },
-              {
-                "segmentId": "18",
-                "cabin": "ECONOMY",
-                "fareBasis": "T00VXP5",
-                "class": "T"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "flight-offer",
-        "id": "2",
-        "source": "GDS",
-        "instantTicketingRequired": false,
-        "nonHomogeneous": false,
-        "oneWay": false,
-        "lastTicketingDate": "2023-11-11",
-        "lastTicketingDateTime": "2023-11-11",
-        "numberOfBookableSeats": 3,
-        "itineraries": [
-          {
-            "duration": "PT22H56M",
+            "duration": "PT11H18M",
             "segments": [
               {
                 "departure": {
-                  "iataCode": "MIA",
-                  "at": "2023-11-11T22:09:00"
+                  "iataCode": "ROA",
+                  "at": "2023-12-21T11:25:00"
                 },
                 "arrival": {
-                  "iataCode": "LAS",
-                  "terminal": "3",
-                  "at": "2023-11-12T00:31:00"
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-12-21T12:54:00"
                 },
-                "carrierCode": "F9",
-                "number": "2159",
+                "carrierCode": "DL",
+                "number": "5157",
                 "aircraft": {
-                  "code": "32N"
+                  "code": "CR9"
                 },
-                "operating": {
-                  "carrierCode": "F9"
-                },
-                "duration": "PT5H22M",
+                "duration": "PT1H29M",
                 "id": "15",
                 "numberOfStops": 0,
                 "blacklistedInEU": false
               },
               {
                 "departure": {
-                  "iataCode": "LAS",
-                  "terminal": "3",
-                  "at": "2023-11-12T14:00:00"
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-12-21T20:50:00"
                 },
                 "arrival": {
-                  "iataCode": "DTW",
-                  "terminal": "N",
-                  "at": "2023-11-12T21:05:00"
+                  "iataCode": "MIA",
+                  "at": "2023-12-21T22:43:00"
                 },
-                "carrierCode": "F9",
-                "number": "2130",
+                "carrierCode": "DL",
+                "number": "1589",
                 "aircraft": {
-                  "code": "32N"
+                  "code": "757"
                 },
                 "operating": {
-                  "carrierCode": "F9"
+                  "carrierCode": "DL"
                 },
-                "duration": "PT4H5M",
+                "duration": "PT1H53M",
                 "id": "16",
                 "numberOfStops": 0,
                 "blacklistedInEU": false
@@ -188,8 +118,8 @@
         ],
         "price": {
           "currency": "USD",
-          "total": "169.64",
-          "base": "130.04",
+          "total": "794.36",
+          "base": "693.96",
           "fees": [
             {
               "amount": "0.00",
@@ -200,99 +130,7 @@
               "type": "TICKETING"
             }
           ],
-          "grandTotal": "169.64"
-        },
-        "pricingOptions": {
-          "fareType": [
-            "PUBLISHED"
-          ],
-          "includedCheckedBagsOnly": false
-        },
-        "validatingAirlineCodes": [
-          "F9"
-        ],
-        "travelerPricings": [
-          {
-            "travelerId": "1",
-            "fareOption": "STANDARD",
-            "travelerType": "ADULT",
-            "price": {
-              "currency": "USD",
-              "total": "169.64",
-              "base": "130.04"
-            },
-            "fareDetailsBySegment": [
-              {
-                "segmentId": "15",
-                "cabin": "ECONOMY",
-                "fareBasis": "T00VXP5",
-                "class": "T"
-              },
-              {
-                "segmentId": "16",
-                "cabin": "ECONOMY",
-                "fareBasis": "T00VXP5",
-                "class": "T"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "flight-offer",
-        "id": "3",
-        "source": "GDS",
-        "instantTicketingRequired": false,
-        "nonHomogeneous": false,
-        "oneWay": false,
-        "lastTicketingDate": "2023-11-11",
-        "lastTicketingDateTime": "2023-11-11",
-        "numberOfBookableSeats": 3,
-        "itineraries": [
-          {
-            "duration": "PT3H",
-            "segments": [
-              {
-                "departure": {
-                  "iataCode": "MIA",
-                  "at": "2023-11-11T12:20:00"
-                },
-                "arrival": {
-                  "iataCode": "DTW",
-                  "terminal": "EM",
-                  "at": "2023-11-11T15:20:00"
-                },
-                "carrierCode": "DL",
-                "number": "1468",
-                "aircraft": {
-                  "code": "320"
-                },
-                "operating": {
-                  "carrierCode": "DL"
-                },
-                "duration": "PT3H",
-                "id": "1",
-                "numberOfStops": 0,
-                "blacklistedInEU": false
-              }
-            ]
-          }
-        ],
-        "price": {
-          "currency": "USD",
-          "total": "258.88",
-          "base": "226.98",
-          "fees": [
-            {
-              "amount": "0.00",
-              "type": "SUPPLIER"
-            },
-            {
-              "amount": "0.00",
-              "type": "TICKETING"
-            }
-          ],
-          "grandTotal": "258.88"
+          "grandTotal": "794.36"
         },
         "pricingOptions": {
           "fareType": [
@@ -310,16 +148,437 @@
             "travelerType": "ADULT",
             "price": {
               "currency": "USD",
-              "total": "258.88",
-              "base": "226.98"
+              "total": "794.36",
+              "base": "693.96"
             },
             "fareDetailsBySegment": [
               {
-                "segmentId": "1",
+                "segmentId": "5",
                 "cabin": "ECONOMY",
-                "fareBasis": "KA0QA0MG",
+                "fareBasis": "LF0NA0MQ",
                 "brandedFare": "MAINCABIN",
-                "class": "K",
+                "class": "L",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
+                "includedCheckedBags": {
+                  "quantity": 0
+                }
+              },
+              {
+                "segmentId": "6",
+                "cabin": "ECONOMY",
+                "fareBasis": "UF0QA0MQ",
+                "brandedFare": "MAINCABIN",
+                "class": "U",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
+                "includedCheckedBags": {
+                  "quantity": 0
+                }
+              },
+              {
+                "segmentId": "15",
+                "cabin": "ECONOMY",
+                "fareBasis": "VFWQA0ML",
+                "brandedFare": "MAINCABIN",
+                "class": "V",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
+                "includedCheckedBags": {
+                  "quantity": 0
+                }
+              },
+              {
+                "segmentId": "16",
+                "cabin": "ECONOMY",
+                "fareBasis": "XRVNA0ML",
+                "brandedFare": "MAINCABIN",
+                "class": "X",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
+                "includedCheckedBags": {
+                  "quantity": 0
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "flight-offer",
+        "id": "2",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-11-13",
+        "lastTicketingDateTime": "2023-11-13",
+        "numberOfBookableSeats": 3,
+        "itineraries": [
+          {
+            "duration": "PT8H30M",
+            "segments": [
+              {
+                "departure": {
+                  "iataCode": "MIA",
+                  "at": "2023-11-13T14:05:00"
+                },
+                "arrival": {
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-11-13T16:10:00"
+                },
+                "carrierCode": "DL",
+                "number": "1332",
+                "aircraft": {
+                  "code": "757"
+                },
+                "operating": {
+                  "carrierCode": "DL"
+                },
+                "duration": "PT2H5M",
+                "id": "3",
+                "numberOfStops": 0,
+                "blacklistedInEU": false
+              },
+              {
+                "departure": {
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-11-13T21:10:00"
+                },
+                "arrival": {
+                  "iataCode": "ROA",
+                  "at": "2023-11-13T22:35:00"
+                },
+                "carrierCode": "DL",
+                "number": "2372",
+                "aircraft": {
+                  "code": "320"
+                },
+                "operating": {
+                  "carrierCode": "DL"
+                },
+                "duration": "PT1H25M",
+                "id": "4",
+                "numberOfStops": 0,
+                "blacklistedInEU": false
+              }
+            ]
+          },
+          {
+            "duration": "PT11H18M",
+            "segments": [
+              {
+                "departure": {
+                  "iataCode": "ROA",
+                  "at": "2023-12-21T11:25:00"
+                },
+                "arrival": {
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-12-21T12:54:00"
+                },
+                "carrierCode": "DL",
+                "number": "5157",
+                "aircraft": {
+                  "code": "CR9"
+                },
+                "duration": "PT1H29M",
+                "id": "15",
+                "numberOfStops": 0,
+                "blacklistedInEU": false
+              },
+              {
+                "departure": {
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-12-21T20:50:00"
+                },
+                "arrival": {
+                  "iataCode": "MIA",
+                  "at": "2023-12-21T22:43:00"
+                },
+                "carrierCode": "DL",
+                "number": "1589",
+                "aircraft": {
+                  "code": "757"
+                },
+                "operating": {
+                  "carrierCode": "DL"
+                },
+                "duration": "PT1H53M",
+                "id": "16",
+                "numberOfStops": 0,
+                "blacklistedInEU": false
+              }
+            ]
+          }
+        ],
+        "price": {
+          "currency": "USD",
+          "total": "794.36",
+          "base": "693.96",
+          "fees": [
+            {
+              "amount": "0.00",
+              "type": "SUPPLIER"
+            },
+            {
+              "amount": "0.00",
+              "type": "TICKETING"
+            }
+          ],
+          "grandTotal": "794.36"
+        },
+        "pricingOptions": {
+          "fareType": [
+            "PUBLISHED"
+          ],
+          "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+          "DL"
+        ],
+        "travelerPricings": [
+          {
+            "travelerId": "1",
+            "fareOption": "STANDARD",
+            "travelerType": "ADULT",
+            "price": {
+              "currency": "USD",
+              "total": "794.36",
+              "base": "693.96"
+            },
+            "fareDetailsBySegment": [
+              {
+                "segmentId": "3",
+                "cabin": "ECONOMY",
+                "fareBasis": "LF0NA0MQ",
+                "brandedFare": "MAINCABIN",
+                "class": "L",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
+                "includedCheckedBags": {
+                  "quantity": 0
+                }
+              },
+              {
+                "segmentId": "4",
+                "cabin": "ECONOMY",
+                "fareBasis": "UF0QA0MQ",
+                "brandedFare": "MAINCABIN",
+                "class": "U",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
+                "includedCheckedBags": {
+                  "quantity": 0
+                }
+              },
+              {
+                "segmentId": "15",
+                "cabin": "ECONOMY",
+                "fareBasis": "VFWQA0ML",
+                "brandedFare": "MAINCABIN",
+                "class": "V",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
+                "includedCheckedBags": {
+                  "quantity": 0
+                }
+              },
+              {
+                "segmentId": "16",
+                "cabin": "ECONOMY",
+                "fareBasis": "XRVNA0ML",
+                "brandedFare": "MAINCABIN",
+                "class": "X",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
+                "includedCheckedBags": {
+                  "quantity": 0
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "flight-offer",
+        "id": "3",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-11-13",
+        "lastTicketingDateTime": "2023-11-13",
+        "numberOfBookableSeats": 3,
+        "itineraries": [
+          {
+            "duration": "PT7H39M",
+            "segments": [
+              {
+                "departure": {
+                  "iataCode": "MIA",
+                  "at": "2023-11-13T10:15:00"
+                },
+                "arrival": {
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-11-13T12:05:00"
+                },
+                "carrierCode": "DL",
+                "number": "2836",
+                "aircraft": {
+                  "code": "757"
+                },
+                "operating": {
+                  "carrierCode": "DL"
+                },
+                "duration": "PT1H50M",
+                "id": "5",
+                "numberOfStops": 0,
+                "blacklistedInEU": false
+              },
+              {
+                "departure": {
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-11-13T16:20:00"
+                },
+                "arrival": {
+                  "iataCode": "ROA",
+                  "at": "2023-11-13T17:54:00"
+                },
+                "carrierCode": "DL",
+                "number": "5247",
+                "aircraft": {
+                  "code": "CR9"
+                },
+                "duration": "PT1H34M",
+                "id": "6",
+                "numberOfStops": 0,
+                "blacklistedInEU": false
+              }
+            ]
+          },
+          {
+            "duration": "PT13H15M",
+            "segments": [
+              {
+                "departure": {
+                  "iataCode": "ROA",
+                  "at": "2023-12-21T11:25:00"
+                },
+                "arrival": {
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-12-21T12:54:00"
+                },
+                "carrierCode": "DL",
+                "number": "5157",
+                "aircraft": {
+                  "code": "CR9"
+                },
+                "duration": "PT1H29M",
+                "id": "13",
+                "numberOfStops": 0,
+                "blacklistedInEU": false
+              },
+              {
+                "departure": {
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-12-21T22:49:00"
+                },
+                "arrival": {
+                  "iataCode": "MIA",
+                  "at": "2023-12-22T00:40:00"
+                },
+                "carrierCode": "DL",
+                "number": "1324",
+                "aircraft": {
+                  "code": "757"
+                },
+                "operating": {
+                  "carrierCode": "DL"
+                },
+                "duration": "PT1H51M",
+                "id": "14",
+                "numberOfStops": 0,
+                "blacklistedInEU": false
+              }
+            ]
+          }
+        ],
+        "price": {
+          "currency": "USD",
+          "total": "794.36",
+          "base": "693.96",
+          "fees": [
+            {
+              "amount": "0.00",
+              "type": "SUPPLIER"
+            },
+            {
+              "amount": "0.00",
+              "type": "TICKETING"
+            }
+          ],
+          "grandTotal": "794.36"
+        },
+        "pricingOptions": {
+          "fareType": [
+            "PUBLISHED"
+          ],
+          "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+          "DL"
+        ],
+        "travelerPricings": [
+          {
+            "travelerId": "1",
+            "fareOption": "STANDARD",
+            "travelerType": "ADULT",
+            "price": {
+              "currency": "USD",
+              "total": "794.36",
+              "base": "693.96"
+            },
+            "fareDetailsBySegment": [
+              {
+                "segmentId": "5",
+                "cabin": "ECONOMY",
+                "fareBasis": "LF0NA0MQ",
+                "brandedFare": "MAINCABIN",
+                "class": "L",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
+                "includedCheckedBags": {
+                  "quantity": 0
+                }
+              },
+              {
+                "segmentId": "6",
+                "cabin": "ECONOMY",
+                "fareBasis": "UF0QA0MQ",
+                "brandedFare": "MAINCABIN",
+                "class": "U",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
+                "includedCheckedBags": {
+                  "quantity": 0
+                }
+              },
+              {
+                "segmentId": "13",
+                "cabin": "ECONOMY",
+                "fareBasis": "VFWQA0ML",
+                "brandedFare": "MAINCABIN",
+                "class": "V",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
+                "includedCheckedBags": {
+                  "quantity": 0
+                }
+              },
+              {
+                "segmentId": "14",
+                "cabin": "ECONOMY",
+                "fareBasis": "XRVNA0ML",
+                "brandedFare": "MAINCABIN",
+                "class": "X",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
                 "includedCheckedBags": {
                   "quantity": 0
                 }
@@ -335,33 +594,101 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-11-11",
-        "lastTicketingDateTime": "2023-11-11",
+        "lastTicketingDate": "2023-11-13",
+        "lastTicketingDateTime": "2023-11-13",
         "numberOfBookableSeats": 3,
         "itineraries": [
           {
-            "duration": "PT3H4M",
+            "duration": "PT9H39M",
             "segments": [
               {
                 "departure": {
                   "iataCode": "MIA",
-                  "at": "2023-11-11T08:00:00"
+                  "at": "2023-11-13T08:15:00"
                 },
                 "arrival": {
-                  "iataCode": "DTW",
-                  "terminal": "EM",
-                  "at": "2023-11-11T11:04:00"
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-11-13T10:07:00"
                 },
                 "carrierCode": "DL",
-                "number": "1346",
+                "number": "1327",
                 "aircraft": {
-                  "code": "320"
+                  "code": "757"
                 },
                 "operating": {
                   "carrierCode": "DL"
                 },
-                "duration": "PT3H4M",
-                "id": "4",
+                "duration": "PT1H52M",
+                "id": "7",
+                "numberOfStops": 0,
+                "blacklistedInEU": false
+              },
+              {
+                "departure": {
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-11-13T16:20:00"
+                },
+                "arrival": {
+                  "iataCode": "ROA",
+                  "at": "2023-11-13T17:54:00"
+                },
+                "carrierCode": "DL",
+                "number": "5247",
+                "aircraft": {
+                  "code": "CR9"
+                },
+                "duration": "PT1H34M",
+                "id": "8",
+                "numberOfStops": 0,
+                "blacklistedInEU": false
+              }
+            ]
+          },
+          {
+            "duration": "PT11H18M",
+            "segments": [
+              {
+                "departure": {
+                  "iataCode": "ROA",
+                  "at": "2023-12-21T11:25:00"
+                },
+                "arrival": {
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-12-21T12:54:00"
+                },
+                "carrierCode": "DL",
+                "number": "5157",
+                "aircraft": {
+                  "code": "CR9"
+                },
+                "duration": "PT1H29M",
+                "id": "15",
+                "numberOfStops": 0,
+                "blacklistedInEU": false
+              },
+              {
+                "departure": {
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-12-21T20:50:00"
+                },
+                "arrival": {
+                  "iataCode": "MIA",
+                  "at": "2023-12-21T22:43:00"
+                },
+                "carrierCode": "DL",
+                "number": "1589",
+                "aircraft": {
+                  "code": "757"
+                },
+                "operating": {
+                  "carrierCode": "DL"
+                },
+                "duration": "PT1H53M",
+                "id": "16",
                 "numberOfStops": 0,
                 "blacklistedInEU": false
               }
@@ -370,8 +697,8 @@
         ],
         "price": {
           "currency": "USD",
-          "total": "258.88",
-          "base": "226.98",
+          "total": "794.36",
+          "base": "693.96",
           "fees": [
             {
               "amount": "0.00",
@@ -382,7 +709,7 @@
               "type": "TICKETING"
             }
           ],
-          "grandTotal": "258.88"
+          "grandTotal": "794.36"
         },
         "pricingOptions": {
           "fareType": [
@@ -400,16 +727,50 @@
             "travelerType": "ADULT",
             "price": {
               "currency": "USD",
-              "total": "258.88",
-              "base": "226.98"
+              "total": "794.36",
+              "base": "693.96"
             },
             "fareDetailsBySegment": [
               {
-                "segmentId": "4",
+                "segmentId": "7",
                 "cabin": "ECONOMY",
-                "fareBasis": "KA0QA0MG",
+                "fareBasis": "LF0NA0MQ",
                 "brandedFare": "MAINCABIN",
-                "class": "K",
+                "class": "L",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
+                "includedCheckedBags": {
+                  "quantity": 0
+                }
+              },
+              {
+                "segmentId": "8",
+                "cabin": "ECONOMY",
+                "fareBasis": "UF0QA0MQ",
+                "brandedFare": "MAINCABIN",
+                "class": "U",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
+                "includedCheckedBags": {
+                  "quantity": 0
+                }
+              },
+              {
+                "segmentId": "15",
+                "cabin": "ECONOMY",
+                "fareBasis": "VFWQA0ML",
+                "brandedFare": "MAINCABIN",
+                "class": "V",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
+                "includedCheckedBags": {
+                  "quantity": 0
+                }
+              },
+              {
+                "segmentId": "16",
+                "cabin": "ECONOMY",
+                "fareBasis": "XRVNA0ML",
+                "brandedFare": "MAINCABIN",
+                "class": "X",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
                 "includedCheckedBags": {
                   "quantity": 0
                 }
@@ -425,57 +786,104 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-11-11",
-        "lastTicketingDateTime": "2023-11-11",
-        "numberOfBookableSeats": 4,
+        "lastTicketingDate": "2023-11-13",
+        "lastTicketingDateTime": "2023-11-13",
+        "numberOfBookableSeats": 3,
         "itineraries": [
           {
-            "duration": "PT6H40M",
+            "duration": "PT8H30M",
             "segments": [
               {
                 "departure": {
                   "iataCode": "MIA",
-                  "at": "2023-11-11T14:30:00"
+                  "at": "2023-11-13T14:05:00"
                 },
                 "arrival": {
-                  "iataCode": "MSP",
-                  "terminal": "1",
-                  "at": "2023-11-11T17:25:00"
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-11-13T16:10:00"
                 },
                 "carrierCode": "DL",
-                "number": "1052",
+                "number": "1332",
+                "aircraft": {
+                  "code": "757"
+                },
+                "operating": {
+                  "carrierCode": "DL"
+                },
+                "duration": "PT2H5M",
+                "id": "3",
+                "numberOfStops": 0,
+                "blacklistedInEU": false
+              },
+              {
+                "departure": {
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-11-13T21:10:00"
+                },
+                "arrival": {
+                  "iataCode": "ROA",
+                  "at": "2023-11-13T22:35:00"
+                },
+                "carrierCode": "DL",
+                "number": "2372",
                 "aircraft": {
                   "code": "320"
                 },
                 "operating": {
                   "carrierCode": "DL"
                 },
-                "duration": "PT3H55M",
-                "id": "9",
+                "duration": "PT1H25M",
+                "id": "4",
+                "numberOfStops": 0,
+                "blacklistedInEU": false
+              }
+            ]
+          },
+          {
+            "duration": "PT13H15M",
+            "segments": [
+              {
+                "departure": {
+                  "iataCode": "ROA",
+                  "at": "2023-12-21T11:25:00"
+                },
+                "arrival": {
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-12-21T12:54:00"
+                },
+                "carrierCode": "DL",
+                "number": "5157",
+                "aircraft": {
+                  "code": "CR9"
+                },
+                "duration": "PT1H29M",
+                "id": "13",
                 "numberOfStops": 0,
                 "blacklistedInEU": false
               },
               {
                 "departure": {
-                  "iataCode": "MSP",
-                  "terminal": "1",
-                  "at": "2023-11-11T18:30:00"
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-12-21T22:49:00"
                 },
                 "arrival": {
-                  "iataCode": "DTW",
-                  "terminal": "EM",
-                  "at": "2023-11-11T21:10:00"
+                  "iataCode": "MIA",
+                  "at": "2023-12-22T00:40:00"
                 },
                 "carrierCode": "DL",
-                "number": "1456",
+                "number": "1324",
                 "aircraft": {
-                  "code": "321"
+                  "code": "757"
                 },
                 "operating": {
                   "carrierCode": "DL"
                 },
-                "duration": "PT1H40M",
-                "id": "10",
+                "duration": "PT1H51M",
+                "id": "14",
                 "numberOfStops": 0,
                 "blacklistedInEU": false
               }
@@ -484,8 +892,8 @@
         ],
         "price": {
           "currency": "USD",
-          "total": "268.18",
-          "base": "226.98",
+          "total": "794.36",
+          "base": "693.96",
           "fees": [
             {
               "amount": "0.00",
@@ -496,7 +904,7 @@
               "type": "TICKETING"
             }
           ],
-          "grandTotal": "268.18"
+          "grandTotal": "794.36"
         },
         "pricingOptions": {
           "fareType": [
@@ -514,26 +922,50 @@
             "travelerType": "ADULT",
             "price": {
               "currency": "USD",
-              "total": "268.18",
-              "base": "226.98"
+              "total": "794.36",
+              "base": "693.96"
             },
             "fareDetailsBySegment": [
               {
-                "segmentId": "9",
+                "segmentId": "3",
                 "cabin": "ECONOMY",
-                "fareBasis": "KA0QA0MG",
+                "fareBasis": "LF0NA0MQ",
                 "brandedFare": "MAINCABIN",
-                "class": "K",
+                "class": "L",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
                 "includedCheckedBags": {
                   "quantity": 0
                 }
               },
               {
-                "segmentId": "10",
+                "segmentId": "4",
                 "cabin": "ECONOMY",
-                "fareBasis": "KA0QA0MG",
+                "fareBasis": "UF0QA0MQ",
                 "brandedFare": "MAINCABIN",
-                "class": "K",
+                "class": "U",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
+                "includedCheckedBags": {
+                  "quantity": 0
+                }
+              },
+              {
+                "segmentId": "13",
+                "cabin": "ECONOMY",
+                "fareBasis": "VFWQA0ML",
+                "brandedFare": "MAINCABIN",
+                "class": "V",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
+                "includedCheckedBags": {
+                  "quantity": 0
+                }
+              },
+              {
+                "segmentId": "14",
+                "cabin": "ECONOMY",
+                "fareBasis": "XRVNA0ML",
+                "brandedFare": "MAINCABIN",
+                "class": "X",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
                 "includedCheckedBags": {
                   "quantity": 0
                 }
@@ -549,57 +981,101 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-11-11",
-        "lastTicketingDateTime": "2023-11-11",
-        "numberOfBookableSeats": 9,
+        "lastTicketingDate": "2023-11-13",
+        "lastTicketingDateTime": "2023-11-13",
+        "numberOfBookableSeats": 3,
         "itineraries": [
           {
-            "duration": "PT7H50M",
+            "duration": "PT10H54M",
             "segments": [
               {
                 "departure": {
                   "iataCode": "MIA",
-                  "at": "2023-11-11T07:30:00"
+                  "at": "2023-11-13T07:00:00"
                 },
                 "arrival": {
-                  "iataCode": "MSP",
-                  "terminal": "1",
-                  "at": "2023-11-11T10:21:00"
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-11-13T08:57:00"
                 },
                 "carrierCode": "DL",
-                "number": "1377",
+                "number": "1101",
                 "aircraft": {
-                  "code": "320"
+                  "code": "757"
                 },
                 "operating": {
                   "carrierCode": "DL"
                 },
-                "duration": "PT3H51M",
-                "id": "11",
+                "duration": "PT1H57M",
+                "id": "9",
                 "numberOfStops": 0,
                 "blacklistedInEU": false
               },
               {
                 "departure": {
-                  "iataCode": "MSP",
-                  "terminal": "1",
-                  "at": "2023-11-11T12:45:00"
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-11-13T16:20:00"
                 },
                 "arrival": {
-                  "iataCode": "DTW",
-                  "terminal": "EM",
-                  "at": "2023-11-11T15:20:00"
+                  "iataCode": "ROA",
+                  "at": "2023-11-13T17:54:00"
                 },
                 "carrierCode": "DL",
-                "number": "2313",
+                "number": "5247",
                 "aircraft": {
-                  "code": "739"
+                  "code": "CR9"
+                },
+                "duration": "PT1H34M",
+                "id": "10",
+                "numberOfStops": 0,
+                "blacklistedInEU": false
+              }
+            ]
+          },
+          {
+            "duration": "PT11H18M",
+            "segments": [
+              {
+                "departure": {
+                  "iataCode": "ROA",
+                  "at": "2023-12-21T11:25:00"
+                },
+                "arrival": {
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-12-21T12:54:00"
+                },
+                "carrierCode": "DL",
+                "number": "5157",
+                "aircraft": {
+                  "code": "CR9"
+                },
+                "duration": "PT1H29M",
+                "id": "15",
+                "numberOfStops": 0,
+                "blacklistedInEU": false
+              },
+              {
+                "departure": {
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-12-21T20:50:00"
+                },
+                "arrival": {
+                  "iataCode": "MIA",
+                  "at": "2023-12-21T22:43:00"
+                },
+                "carrierCode": "DL",
+                "number": "1589",
+                "aircraft": {
+                  "code": "757"
                 },
                 "operating": {
                   "carrierCode": "DL"
                 },
-                "duration": "PT1H35M",
-                "id": "12",
+                "duration": "PT1H53M",
+                "id": "16",
                 "numberOfStops": 0,
                 "blacklistedInEU": false
               }
@@ -608,8 +1084,8 @@
         ],
         "price": {
           "currency": "USD",
-          "total": "268.18",
-          "base": "226.98",
+          "total": "794.36",
+          "base": "693.96",
           "fees": [
             {
               "amount": "0.00",
@@ -620,7 +1096,7 @@
               "type": "TICKETING"
             }
           ],
-          "grandTotal": "268.18"
+          "grandTotal": "794.36"
         },
         "pricingOptions": {
           "fareType": [
@@ -638,26 +1114,50 @@
             "travelerType": "ADULT",
             "price": {
               "currency": "USD",
-              "total": "268.18",
-              "base": "226.98"
+              "total": "794.36",
+              "base": "693.96"
             },
             "fareDetailsBySegment": [
               {
-                "segmentId": "11",
+                "segmentId": "9",
                 "cabin": "ECONOMY",
-                "fareBasis": "KA0QA0MG",
+                "fareBasis": "LF0NA0MQ",
                 "brandedFare": "MAINCABIN",
-                "class": "K",
+                "class": "L",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
                 "includedCheckedBags": {
                   "quantity": 0
                 }
               },
               {
-                "segmentId": "12",
+                "segmentId": "10",
                 "cabin": "ECONOMY",
-                "fareBasis": "KA0QA0MG",
+                "fareBasis": "UF0QA0MQ",
                 "brandedFare": "MAINCABIN",
-                "class": "K",
+                "class": "U",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
+                "includedCheckedBags": {
+                  "quantity": 0
+                }
+              },
+              {
+                "segmentId": "15",
+                "cabin": "ECONOMY",
+                "fareBasis": "VFWQA0ML",
+                "brandedFare": "MAINCABIN",
+                "class": "V",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
+                "includedCheckedBags": {
+                  "quantity": 0
+                }
+              },
+              {
+                "segmentId": "16",
+                "cabin": "ECONOMY",
+                "fareBasis": "XRVNA0ML",
+                "brandedFare": "MAINCABIN",
+                "class": "X",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
                 "includedCheckedBags": {
                   "quantity": 0
                 }
@@ -673,56 +1173,100 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-11-11",
-        "lastTicketingDateTime": "2023-11-11",
-        "numberOfBookableSeats": 9,
+        "lastTicketingDate": "2023-11-13",
+        "lastTicketingDateTime": "2023-11-13",
+        "numberOfBookableSeats": 3,
         "itineraries": [
           {
-            "duration": "PT7H53M",
+            "duration": "PT9H39M",
             "segments": [
               {
                 "departure": {
                   "iataCode": "MIA",
-                  "at": "2023-11-11T07:00:00"
+                  "at": "2023-11-13T08:15:00"
                 },
                 "arrival": {
-                  "iataCode": "LGA",
-                  "terminal": "C",
-                  "at": "2023-11-11T10:06:00"
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-11-13T10:07:00"
                 },
                 "carrierCode": "DL",
-                "number": "419",
+                "number": "1327",
                 "aircraft": {
-                  "code": "738"
+                  "code": "757"
                 },
                 "operating": {
                   "carrierCode": "DL"
                 },
-                "duration": "PT3H6M",
+                "duration": "PT1H52M",
+                "id": "7",
+                "numberOfStops": 0,
+                "blacklistedInEU": false
+              },
+              {
+                "departure": {
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-11-13T16:20:00"
+                },
+                "arrival": {
+                  "iataCode": "ROA",
+                  "at": "2023-11-13T17:54:00"
+                },
+                "carrierCode": "DL",
+                "number": "5247",
+                "aircraft": {
+                  "code": "CR9"
+                },
+                "duration": "PT1H34M",
+                "id": "8",
+                "numberOfStops": 0,
+                "blacklistedInEU": false
+              }
+            ]
+          },
+          {
+            "duration": "PT13H15M",
+            "segments": [
+              {
+                "departure": {
+                  "iataCode": "ROA",
+                  "at": "2023-12-21T11:25:00"
+                },
+                "arrival": {
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-12-21T12:54:00"
+                },
+                "carrierCode": "DL",
+                "number": "5157",
+                "aircraft": {
+                  "code": "CR9"
+                },
+                "duration": "PT1H29M",
                 "id": "13",
                 "numberOfStops": 0,
                 "blacklistedInEU": false
               },
               {
                 "departure": {
-                  "iataCode": "LGA",
-                  "terminal": "C",
-                  "at": "2023-11-11T12:50:00"
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-12-21T22:49:00"
                 },
                 "arrival": {
-                  "iataCode": "DTW",
-                  "terminal": "EM",
-                  "at": "2023-11-11T14:53:00"
+                  "iataCode": "MIA",
+                  "at": "2023-12-22T00:40:00"
                 },
                 "carrierCode": "DL",
-                "number": "2095",
+                "number": "1324",
                 "aircraft": {
-                  "code": "320"
+                  "code": "757"
                 },
                 "operating": {
                   "carrierCode": "DL"
                 },
-                "duration": "PT2H3M",
+                "duration": "PT1H51M",
                 "id": "14",
                 "numberOfStops": 0,
                 "blacklistedInEU": false
@@ -732,8 +1276,8 @@
         ],
         "price": {
           "currency": "USD",
-          "total": "268.18",
-          "base": "226.98",
+          "total": "794.36",
+          "base": "693.96",
           "fees": [
             {
               "amount": "0.00",
@@ -744,7 +1288,7 @@
               "type": "TICKETING"
             }
           ],
-          "grandTotal": "268.18"
+          "grandTotal": "794.36"
         },
         "pricingOptions": {
           "fareType": [
@@ -762,16 +1306,39 @@
             "travelerType": "ADULT",
             "price": {
               "currency": "USD",
-              "total": "268.18",
-              "base": "226.98"
+              "total": "794.36",
+              "base": "693.96"
             },
             "fareDetailsBySegment": [
               {
+                "segmentId": "7",
+                "cabin": "ECONOMY",
+                "fareBasis": "LF0NA0MQ",
+                "brandedFare": "MAINCABIN",
+                "class": "L",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
+                "includedCheckedBags": {
+                  "quantity": 0
+                }
+              },
+              {
+                "segmentId": "8",
+                "cabin": "ECONOMY",
+                "fareBasis": "UF0QA0MQ",
+                "brandedFare": "MAINCABIN",
+                "class": "U",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
+                "includedCheckedBags": {
+                  "quantity": 0
+                }
+              },
+              {
                 "segmentId": "13",
                 "cabin": "ECONOMY",
-                "fareBasis": "KA0QA0MG",
+                "fareBasis": "VFWQA0ML",
                 "brandedFare": "MAINCABIN",
-                "class": "K",
+                "class": "V",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
                 "includedCheckedBags": {
                   "quantity": 0
                 }
@@ -779,9 +1346,10 @@
               {
                 "segmentId": "14",
                 "cabin": "ECONOMY",
-                "fareBasis": "KA0QA0MG",
+                "fareBasis": "XRVNA0ML",
                 "brandedFare": "MAINCABIN",
-                "class": "K",
+                "class": "X",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
                 "includedCheckedBags": {
                   "quantity": 0
                 }
@@ -797,52 +1365,101 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-11-11",
-        "lastTicketingDateTime": "2023-11-11",
-        "numberOfBookableSeats": 4,
+        "lastTicketingDate": "2023-11-13",
+        "lastTicketingDateTime": "2023-11-13",
+        "numberOfBookableSeats": 3,
         "itineraries": [
           {
-            "duration": "PT5H4M",
+            "duration": "PT11H54M",
             "segments": [
               {
                 "departure": {
                   "iataCode": "MIA",
-                  "at": "2023-11-11T13:47:00"
+                  "at": "2023-11-13T06:00:00"
                 },
                 "arrival": {
-                  "iataCode": "IAD",
-                  "at": "2023-11-11T16:25:00"
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-11-13T07:53:00"
                 },
-                "carrierCode": "UA",
-                "number": "1938",
+                "carrierCode": "DL",
+                "number": "1404",
                 "aircraft": {
-                  "code": "73G"
+                  "code": "757"
                 },
                 "operating": {
-                  "carrierCode": "UA"
+                  "carrierCode": "DL"
                 },
-                "duration": "PT2H38M",
-                "id": "5",
+                "duration": "PT1H53M",
+                "id": "11",
                 "numberOfStops": 0,
                 "blacklistedInEU": false
               },
               {
                 "departure": {
-                  "iataCode": "IAD",
-                  "at": "2023-11-11T17:15:00"
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-11-13T16:20:00"
                 },
                 "arrival": {
-                  "iataCode": "DTW",
-                  "terminal": "N",
-                  "at": "2023-11-11T18:51:00"
+                  "iataCode": "ROA",
+                  "at": "2023-11-13T17:54:00"
                 },
-                "carrierCode": "UA",
-                "number": "6362",
+                "carrierCode": "DL",
+                "number": "5247",
                 "aircraft": {
-                  "code": "E7W"
+                  "code": "CR9"
                 },
-                "duration": "PT1H36M",
-                "id": "6",
+                "duration": "PT1H34M",
+                "id": "12",
+                "numberOfStops": 0,
+                "blacklistedInEU": false
+              }
+            ]
+          },
+          {
+            "duration": "PT11H18M",
+            "segments": [
+              {
+                "departure": {
+                  "iataCode": "ROA",
+                  "at": "2023-12-21T11:25:00"
+                },
+                "arrival": {
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-12-21T12:54:00"
+                },
+                "carrierCode": "DL",
+                "number": "5157",
+                "aircraft": {
+                  "code": "CR9"
+                },
+                "duration": "PT1H29M",
+                "id": "15",
+                "numberOfStops": 0,
+                "blacklistedInEU": false
+              },
+              {
+                "departure": {
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-12-21T20:50:00"
+                },
+                "arrival": {
+                  "iataCode": "MIA",
+                  "at": "2023-12-21T22:43:00"
+                },
+                "carrierCode": "DL",
+                "number": "1589",
+                "aircraft": {
+                  "code": "757"
+                },
+                "operating": {
+                  "carrierCode": "DL"
+                },
+                "duration": "PT1H53M",
+                "id": "16",
                 "numberOfStops": 0,
                 "blacklistedInEU": false
               }
@@ -851,8 +1468,8 @@
         ],
         "price": {
           "currency": "USD",
-          "total": "288.18",
-          "base": "245.58",
+          "total": "794.36",
+          "base": "693.96",
           "fees": [
             {
               "amount": "0.00",
@@ -863,7 +1480,7 @@
               "type": "TICKETING"
             }
           ],
-          "grandTotal": "288.18"
+          "grandTotal": "794.36"
         },
         "pricingOptions": {
           "fareType": [
@@ -872,7 +1489,7 @@
           "includedCheckedBagsOnly": false
         },
         "validatingAirlineCodes": [
-          "UA"
+          "DL"
         ],
         "travelerPricings": [
           {
@@ -881,26 +1498,50 @@
             "travelerType": "ADULT",
             "price": {
               "currency": "USD",
-              "total": "288.18",
-              "base": "245.58"
+              "total": "794.36",
+              "base": "693.96"
             },
             "fareDetailsBySegment": [
               {
-                "segmentId": "5",
+                "segmentId": "11",
                 "cabin": "ECONOMY",
-                "fareBasis": "WAA0AFEN",
-                "brandedFare": "ECONOMY",
-                "class": "W",
+                "fareBasis": "LF0NA0MQ",
+                "brandedFare": "MAINCABIN",
+                "class": "L",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
                 "includedCheckedBags": {
                   "quantity": 0
                 }
               },
               {
-                "segmentId": "6",
+                "segmentId": "12",
                 "cabin": "ECONOMY",
-                "fareBasis": "WAA0AFEN",
-                "brandedFare": "ECONOMY",
-                "class": "W",
+                "fareBasis": "UF0QA0MQ",
+                "brandedFare": "MAINCABIN",
+                "class": "U",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
+                "includedCheckedBags": {
+                  "quantity": 0
+                }
+              },
+              {
+                "segmentId": "15",
+                "cabin": "ECONOMY",
+                "fareBasis": "VFWQA0ML",
+                "brandedFare": "MAINCABIN",
+                "class": "V",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
+                "includedCheckedBags": {
+                  "quantity": 0
+                }
+              },
+              {
+                "segmentId": "16",
+                "cabin": "ECONOMY",
+                "fareBasis": "XRVNA0ML",
+                "brandedFare": "MAINCABIN",
+                "class": "X",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
                 "includedCheckedBags": {
                   "quantity": 0
                 }
@@ -916,57 +1557,104 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-11-11",
-        "lastTicketingDateTime": "2023-11-11",
-        "numberOfBookableSeats": 9,
+        "lastTicketingDate": "2023-11-13",
+        "lastTicketingDateTime": "2023-11-13",
+        "numberOfBookableSeats": 3,
         "itineraries": [
           {
-            "duration": "PT7H3M",
+            "duration": "PT12H20M",
             "segments": [
               {
                 "departure": {
                   "iataCode": "MIA",
-                  "at": "2023-11-11T16:41:00"
+                  "at": "2023-11-13T10:15:00"
                 },
                 "arrival": {
-                  "iataCode": "IAH",
-                  "terminal": "C",
-                  "at": "2023-11-11T18:40:00"
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-11-13T12:05:00"
                 },
-                "carrierCode": "UA",
-                "number": "2215",
+                "carrierCode": "DL",
+                "number": "2836",
                 "aircraft": {
-                  "code": "320"
+                  "code": "757"
                 },
                 "operating": {
-                  "carrierCode": "UA"
+                  "carrierCode": "DL"
                 },
-                "duration": "PT2H59M",
-                "id": "2",
+                "duration": "PT1H50M",
+                "id": "1",
                 "numberOfStops": 0,
                 "blacklistedInEU": false
               },
               {
                 "departure": {
-                  "iataCode": "IAH",
-                  "terminal": "C",
-                  "at": "2023-11-11T20:02:00"
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-11-13T21:10:00"
                 },
                 "arrival": {
-                  "iataCode": "DTW",
-                  "terminal": "N",
-                  "at": "2023-11-11T23:44:00"
+                  "iataCode": "ROA",
+                  "at": "2023-11-13T22:35:00"
                 },
-                "carrierCode": "UA",
-                "number": "2672",
+                "carrierCode": "DL",
+                "number": "2372",
                 "aircraft": {
                   "code": "320"
                 },
                 "operating": {
-                  "carrierCode": "UA"
+                  "carrierCode": "DL"
                 },
-                "duration": "PT2H42M",
-                "id": "3",
+                "duration": "PT1H25M",
+                "id": "2",
+                "numberOfStops": 0,
+                "blacklistedInEU": false
+              }
+            ]
+          },
+          {
+            "duration": "PT11H18M",
+            "segments": [
+              {
+                "departure": {
+                  "iataCode": "ROA",
+                  "at": "2023-12-21T11:25:00"
+                },
+                "arrival": {
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-12-21T12:54:00"
+                },
+                "carrierCode": "DL",
+                "number": "5157",
+                "aircraft": {
+                  "code": "CR9"
+                },
+                "duration": "PT1H29M",
+                "id": "15",
+                "numberOfStops": 0,
+                "blacklistedInEU": false
+              },
+              {
+                "departure": {
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-12-21T20:50:00"
+                },
+                "arrival": {
+                  "iataCode": "MIA",
+                  "at": "2023-12-21T22:43:00"
+                },
+                "carrierCode": "DL",
+                "number": "1589",
+                "aircraft": {
+                  "code": "757"
+                },
+                "operating": {
+                  "carrierCode": "DL"
+                },
+                "duration": "PT1H53M",
+                "id": "16",
                 "numberOfStops": 0,
                 "blacklistedInEU": false
               }
@@ -975,8 +1663,8 @@
         ],
         "price": {
           "currency": "USD",
-          "total": "288.18",
-          "base": "245.58",
+          "total": "794.36",
+          "base": "693.96",
           "fees": [
             {
               "amount": "0.00",
@@ -987,7 +1675,7 @@
               "type": "TICKETING"
             }
           ],
-          "grandTotal": "288.18"
+          "grandTotal": "794.36"
         },
         "pricingOptions": {
           "fareType": [
@@ -996,7 +1684,7 @@
           "includedCheckedBagsOnly": false
         },
         "validatingAirlineCodes": [
-          "UA"
+          "DL"
         ],
         "travelerPricings": [
           {
@@ -1005,26 +1693,50 @@
             "travelerType": "ADULT",
             "price": {
               "currency": "USD",
-              "total": "288.18",
-              "base": "245.58"
+              "total": "794.36",
+              "base": "693.96"
             },
             "fareDetailsBySegment": [
               {
-                "segmentId": "2",
+                "segmentId": "1",
                 "cabin": "ECONOMY",
-                "fareBasis": "WAA0AFEN",
-                "brandedFare": "ECONOMY",
-                "class": "W",
+                "fareBasis": "LF0NA0MQ",
+                "brandedFare": "MAINCABIN",
+                "class": "L",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
                 "includedCheckedBags": {
                   "quantity": 0
                 }
               },
               {
-                "segmentId": "3",
+                "segmentId": "2",
                 "cabin": "ECONOMY",
-                "fareBasis": "WAA0AFEN",
-                "brandedFare": "ECONOMY",
-                "class": "W",
+                "fareBasis": "UF0QA0MQ",
+                "brandedFare": "MAINCABIN",
+                "class": "U",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
+                "includedCheckedBags": {
+                  "quantity": 0
+                }
+              },
+              {
+                "segmentId": "15",
+                "cabin": "ECONOMY",
+                "fareBasis": "VFWQA0ML",
+                "brandedFare": "MAINCABIN",
+                "class": "V",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
+                "includedCheckedBags": {
+                  "quantity": 0
+                }
+              },
+              {
+                "segmentId": "16",
+                "cabin": "ECONOMY",
+                "fareBasis": "XRVNA0ML",
+                "brandedFare": "MAINCABIN",
+                "class": "X",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
                 "includedCheckedBags": {
                   "quantity": 0
                 }
@@ -1040,54 +1752,101 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-11-11",
-        "lastTicketingDateTime": "2023-11-11",
-        "numberOfBookableSeats": 9,
+        "lastTicketingDate": "2023-11-13",
+        "lastTicketingDateTime": "2023-11-13",
+        "numberOfBookableSeats": 3,
         "itineraries": [
           {
-            "duration": "PT7H22M",
+            "duration": "PT10H54M",
             "segments": [
               {
                 "departure": {
                   "iataCode": "MIA",
-                  "at": "2023-11-11T16:15:00"
+                  "at": "2023-11-13T07:00:00"
                 },
                 "arrival": {
-                  "iataCode": "ORD",
-                  "terminal": "1",
-                  "at": "2023-11-11T18:40:00"
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-11-13T08:57:00"
                 },
-                "carrierCode": "UA",
-                "number": "2362",
+                "carrierCode": "DL",
+                "number": "1101",
                 "aircraft": {
-                  "code": "7M9"
+                  "code": "757"
                 },
                 "operating": {
-                  "carrierCode": "UA"
+                  "carrierCode": "DL"
                 },
-                "duration": "PT3H25M",
-                "id": "7",
+                "duration": "PT1H57M",
+                "id": "9",
                 "numberOfStops": 0,
                 "blacklistedInEU": false
               },
               {
                 "departure": {
-                  "iataCode": "ORD",
-                  "terminal": "2",
-                  "at": "2023-11-11T21:15:00"
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-11-13T16:20:00"
                 },
                 "arrival": {
-                  "iataCode": "DTW",
-                  "terminal": "N",
-                  "at": "2023-11-11T23:37:00"
+                  "iataCode": "ROA",
+                  "at": "2023-11-13T17:54:00"
                 },
-                "carrierCode": "UA",
-                "number": "5785",
+                "carrierCode": "DL",
+                "number": "5247",
                 "aircraft": {
-                  "code": "E7W"
+                  "code": "CR9"
                 },
-                "duration": "PT1H22M",
-                "id": "8",
+                "duration": "PT1H34M",
+                "id": "10",
+                "numberOfStops": 0,
+                "blacklistedInEU": false
+              }
+            ]
+          },
+          {
+            "duration": "PT13H15M",
+            "segments": [
+              {
+                "departure": {
+                  "iataCode": "ROA",
+                  "at": "2023-12-21T11:25:00"
+                },
+                "arrival": {
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-12-21T12:54:00"
+                },
+                "carrierCode": "DL",
+                "number": "5157",
+                "aircraft": {
+                  "code": "CR9"
+                },
+                "duration": "PT1H29M",
+                "id": "13",
+                "numberOfStops": 0,
+                "blacklistedInEU": false
+              },
+              {
+                "departure": {
+                  "iataCode": "ATL",
+                  "terminal": "S",
+                  "at": "2023-12-21T22:49:00"
+                },
+                "arrival": {
+                  "iataCode": "MIA",
+                  "at": "2023-12-22T00:40:00"
+                },
+                "carrierCode": "DL",
+                "number": "1324",
+                "aircraft": {
+                  "code": "757"
+                },
+                "operating": {
+                  "carrierCode": "DL"
+                },
+                "duration": "PT1H51M",
+                "id": "14",
                 "numberOfStops": 0,
                 "blacklistedInEU": false
               }
@@ -1096,8 +1855,8 @@
         ],
         "price": {
           "currency": "USD",
-          "total": "288.18",
-          "base": "245.58",
+          "total": "794.36",
+          "base": "693.96",
           "fees": [
             {
               "amount": "0.00",
@@ -1108,7 +1867,7 @@
               "type": "TICKETING"
             }
           ],
-          "grandTotal": "288.18"
+          "grandTotal": "794.36"
         },
         "pricingOptions": {
           "fareType": [
@@ -1117,7 +1876,7 @@
           "includedCheckedBagsOnly": false
         },
         "validatingAirlineCodes": [
-          "UA"
+          "DL"
         ],
         "travelerPricings": [
           {
@@ -1126,26 +1885,50 @@
             "travelerType": "ADULT",
             "price": {
               "currency": "USD",
-              "total": "288.18",
-              "base": "245.58"
+              "total": "794.36",
+              "base": "693.96"
             },
             "fareDetailsBySegment": [
               {
-                "segmentId": "7",
+                "segmentId": "9",
                 "cabin": "ECONOMY",
-                "fareBasis": "WAA0AFEN",
-                "brandedFare": "ECONOMY",
-                "class": "W",
+                "fareBasis": "LF0NA0MQ",
+                "brandedFare": "MAINCABIN",
+                "class": "L",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
                 "includedCheckedBags": {
                   "quantity": 0
                 }
               },
               {
-                "segmentId": "8",
+                "segmentId": "10",
                 "cabin": "ECONOMY",
-                "fareBasis": "WAA0AFEN",
-                "brandedFare": "ECONOMY",
-                "class": "W",
+                "fareBasis": "UF0QA0MQ",
+                "brandedFare": "MAINCABIN",
+                "class": "U",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
+                "includedCheckedBags": {
+                  "quantity": 0
+                }
+              },
+              {
+                "segmentId": "13",
+                "cabin": "ECONOMY",
+                "fareBasis": "VFWQA0ML",
+                "brandedFare": "MAINCABIN",
+                "class": "V",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
+                "includedCheckedBags": {
+                  "quantity": 0
+                }
+              },
+              {
+                "segmentId": "14",
+                "cabin": "ECONOMY",
+                "fareBasis": "XRVNA0ML",
+                "brandedFare": "MAINCABIN",
+                "class": "X",
+                "sliceDiceIndicator": "LOCAL_AVAILABILITY",
                 "includedCheckedBags": {
                   "quantity": 0
                 }
@@ -1157,60 +1940,29 @@
     ],
     "dictionaries": {
       "locations": {
-        "ORD": {
-          "cityCode": "CHI",
-          "countryCode": "US"
-        },
-        "IAH": {
-          "cityCode": "HOU",
-          "countryCode": "US"
-        },
         "MIA": {
           "cityCode": "MIA",
           "countryCode": "US"
         },
-        "DTW": {
-          "cityCode": "DTT",
+        "ROA": {
+          "cityCode": "ROA",
           "countryCode": "US"
         },
-        "LGA": {
-          "cityCode": "NYC",
-          "countryCode": "US"
-        },
-        "MSP": {
-          "cityCode": "MSP",
-          "countryCode": "US"
-        },
-        "DEN": {
-          "cityCode": "DEN",
-          "countryCode": "US"
-        },
-        "IAD": {
-          "cityCode": "WAS",
-          "countryCode": "US"
-        },
-        "LAS": {
-          "cityCode": "LAS",
+        "ATL": {
+          "cityCode": "ATL",
           "countryCode": "US"
         }
       },
       "aircraft": {
         "320": "AIRBUS A320",
-        "321": "AIRBUS A321",
-        "738": "BOEING 737-800",
-        "739": "BOEING 737-900",
-        "7M9": "BOEING 737 MAX 9",
-        "E7W": "EMBRAER 175 (ENHANCED WINGLETS)",
-        "73G": "BOEING 737-700",
-        "32N": "AIRBUS A320NEO"
+        "757": "BOEING 757",
+        "CR9": "CANADAIR REGIONAL JET 900"
       },
       "currencies": {
         "USD": "US DOLLAR"
       },
       "carriers": {
-        "F9": "FRONTIER AIRLINES",
-        "DL": "DELTA AIR LINES",
-        "UA": "UNITED AIRLINES"
+        "DL": "DELTA AIR LINES"
       }
     }
   }

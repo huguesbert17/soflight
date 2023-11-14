@@ -1,0 +1,357 @@
+{
+  "warnings": [
+    {
+      "status": 200,
+      "code": 0,
+      "title": "SSRDocsNotAddedBookingWarning",
+      "detail": "At least one of the passengers' document has not been added. Please proceed manually"
+    }
+  ],
+  "data": {
+    "type": "flight-order",
+    "id": "eJzTd9cPs4yMcDIDAAt4Al4%3D",
+    "queuingOfficeId": "NCE4D31SB",
+    "associatedRecords": [
+      {
+        "reference": "V9YXB6",
+        "creationDate": "2023-11-14T09:57:00.000",
+        "originSystemCode": "GDS",
+        "flightOfferId": "4"
+      }
+    ],
+    "flightOffers": [
+      {
+        "type": "flight-offer",
+        "id": "4",
+        "source": "GDS",
+        "nonHomogeneous": false,
+        "lastTicketingDate": "2023-11-15",
+        "itineraries": [
+          {
+            "segments": [
+              {
+                "departure": {
+                  "iataCode": "MIA",
+                  "at": "2023-11-17T06:35:00"
+                },
+                "arrival": {
+                  "iataCode": "IAH",
+                  "terminal": "C",
+                  "at": "2023-11-17T08:31:00"
+                },
+                "carrierCode": "UA",
+                "number": "2311",
+                "aircraft": {
+                  "code": "738"
+                },
+                "duration": "PT2H56M",
+                "id": "1",
+                "numberOfStops": 0,
+                "co2Emissions": [
+                  {
+                    "weight": 136,
+                    "weightUnit": "KG",
+                    "cabin": "ECONOMY"
+                  }
+                ]
+              },
+              {
+                "departure": {
+                  "iataCode": "IAH",
+                  "terminal": "C",
+                  "at": "2023-11-17T10:00:00"
+                },
+                "arrival": {
+                  "iataCode": "DCA",
+                  "terminal": "2",
+                  "at": "2023-11-17T13:54:00"
+                },
+                "carrierCode": "UA",
+                "number": "1383",
+                "aircraft": {
+                  "code": "73G"
+                },
+                "duration": "PT2H54M",
+                "id": "2",
+                "numberOfStops": 0,
+                "co2Emissions": [
+                  {
+                    "weight": 181,
+                    "weightUnit": "KG",
+                    "cabin": "ECONOMY"
+                  }
+                ]
+              },
+              {
+                "departure": {
+                  "iataCode": "IAD",
+                  "at": "2023-11-17T17:35:00"
+                },
+                "arrival": {
+                  "iataCode": "ROA",
+                  "at": "2023-11-17T18:48:00"
+                },
+                "carrierCode": "UA",
+                "number": "4339",
+                "aircraft": {
+                  "code": "ERJ"
+                },
+                "duration": "PT1H13M",
+                "id": "3",
+                "numberOfStops": 0,
+                "co2Emissions": [
+                  {
+                    "weight": 85,
+                    "weightUnit": "KG",
+                    "cabin": "ECONOMY"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "segments": [
+              {
+                "departure": {
+                  "iataCode": "ROA",
+                  "at": "2023-11-18T17:51:00"
+                },
+                "arrival": {
+                  "iataCode": "ORD",
+                  "terminal": "2",
+                  "at": "2023-11-18T18:55:00"
+                },
+                "carrierCode": "UA",
+                "number": "5481",
+                "aircraft": {
+                  "code": "E7W"
+                },
+                "duration": "PT2H4M",
+                "id": "13",
+                "numberOfStops": 0,
+                "co2Emissions": [
+                  {
+                    "weight": 125,
+                    "weightUnit": "KG",
+                    "cabin": "ECONOMY"
+                  }
+                ]
+              },
+              {
+                "departure": {
+                  "iataCode": "ORD",
+                  "terminal": "1",
+                  "at": "2023-11-18T19:50:00"
+                },
+                "arrival": {
+                  "iataCode": "MIA",
+                  "at": "2023-11-18T23:58:00"
+                },
+                "carrierCode": "UA",
+                "number": "2177",
+                "aircraft": {
+                  "code": "738"
+                },
+                "duration": "PT3H8M",
+                "id": "14",
+                "numberOfStops": 0,
+                "co2Emissions": [
+                  {
+                    "weight": 151,
+                    "weightUnit": "KG",
+                    "cabin": "ECONOMY"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "price": {
+          "currency": "USD",
+          "total": "557.23",
+          "base": "468.83",
+          "fees": [
+            {
+              "amount": "0.00",
+              "type": "TICKETING"
+            },
+            {
+              "amount": "0.00",
+              "type": "SUPPLIER"
+            },
+            {
+              "amount": "0.00",
+              "type": "FORM_OF_PAYMENT"
+            }
+          ],
+          "grandTotal": "557.23",
+          "billingCurrency": "USD"
+        },
+        "pricingOptions": {
+          "fareType": [
+            "PUBLISHED"
+          ],
+          "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+          "UA"
+        ],
+        "travelerPricings": [
+          {
+            "travelerId": "1",
+            "fareOption": "STANDARD",
+            "travelerType": "ADULT",
+            "price": {
+              "currency": "USD",
+              "total": "557.23",
+              "base": "468.83",
+              "taxes": [
+                {
+                  "amount": "11.20",
+                  "code": "AY"
+                },
+                {
+                  "amount": "35.20",
+                  "code": "US"
+                },
+                {
+                  "amount": "18.00",
+                  "code": "XF"
+                },
+                {
+                  "amount": "24.00",
+                  "code": "ZP"
+                }
+              ],
+              "refundableTaxes": "11.20"
+            },
+            "fareDetailsBySegment": [
+              {
+                "segmentId": "1",
+                "cabin": "ECONOMY",
+                "fareBasis": "SFA0PFEN",
+                "brandedFare": "ECONOMY",
+                "class": "S",
+                "includedCheckedBags": {
+                  "quantity": 0
+                }
+              },
+              {
+                "segmentId": "2",
+                "cabin": "ECONOMY",
+                "fareBasis": "SFA0PFEN",
+                "brandedFare": "ECONOMY",
+                "class": "S",
+                "includedCheckedBags": {
+                  "quantity": 0
+                }
+              },
+              {
+                "segmentId": "3",
+                "cabin": "ECONOMY",
+                "fareBasis": "SFA0PFEN",
+                "brandedFare": "ECONOMY",
+                "class": "S",
+                "includedCheckedBags": {
+                  "quantity": 0
+                }
+              },
+              {
+                "segmentId": "13",
+                "cabin": "ECONOMY",
+                "fareBasis": "VFA0JFEN",
+                "brandedFare": "ECONOMY",
+                "class": "V",
+                "includedCheckedBags": {
+                  "quantity": 0
+                }
+              },
+              {
+                "segmentId": "14",
+                "cabin": "ECONOMY",
+                "fareBasis": "VFA0JFEN",
+                "brandedFare": "ECONOMY",
+                "class": "V",
+                "includedCheckedBags": {
+                  "quantity": 0
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "travelers": [
+      {
+        "id": "1",
+        "gender": "MALE",
+        "name": {
+          "firstName": "Bel",
+          "lastName": "hh"
+        },
+        "documents": [
+          {
+            "number": "012345678",
+            "expiryDate": "2030-04-14",
+            "issuanceCountry": "GB",
+            "nationality": "GB",
+            "documentType": "PASSPORT",
+            "holder": true
+          }
+        ],
+        "contact": {
+          "purpose": "STANDARD",
+          "phones": [
+            {
+              "deviceType": "MOBILE",
+              "countryCallingCode": "33",
+              "number": "487692704"
+            }
+          ],
+          "emailAddress": "jorge.gonzales833@telefonica.es"
+        }
+      }
+    ],
+    "ticketingAgreement": {
+      "option": "CONFIRM"
+    },
+    "automatedProcess": [
+      {
+        "code": "IMMEDIATE",
+        "queue": {
+          "number": "0",
+          "category": "0"
+        },
+        "officeId": "NCE4D31SB"
+      }
+    ]
+  },
+  "dictionaries": {
+    "locations": {
+      "ORD": {
+        "cityCode": "CHI",
+        "countryCode": "US"
+      },
+      "IAH": {
+        "cityCode": "HOU",
+        "countryCode": "US"
+      },
+      "DCA": {
+        "cityCode": "WAS",
+        "countryCode": "US"
+      },
+      "MIA": {
+        "cityCode": "MIA",
+        "countryCode": "US"
+      },
+      "ROA": {
+        "cityCode": "ROA",
+        "countryCode": "US"
+      },
+      "IAD": {
+        "cityCode": "WAS",
+        "countryCode": "US"
+      }
+    }
+  }
+}

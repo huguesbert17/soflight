@@ -1,5 +1,6 @@
 import express, { Express, Request, Response , Application } from 'express';
 import dotenv from 'dotenv';
+const bodyParser = require('body-parser')
 import cors from "cors"
 const session = require('express-session')
 
@@ -16,6 +17,9 @@ const sess = {
 //     sess.cookie.secure = true // serve secure cookies
 // }
 
+// create application/json parser
+const jsonParser = bodyParser.json()
+
 const indexRouter = require('./src/routes');
 
 const corsOptions = {
@@ -29,6 +33,11 @@ const port = process.env.PORT || 8000;
 //app.use(session(sess))
 
 app.use(cors())
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+
+// parse application/json
+app.use(bodyParser.json())
 
 app.use('/', indexRouter);
 app.listen(port, () => {

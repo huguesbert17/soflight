@@ -1,0 +1,278 @@
+{
+  "warnings": [
+    {
+      "code": 0,
+      "title": "FareDetailsBySegmentDiscrepancyWarning",
+      "detail": "The sliceDiceIndicator has changed for some passengers",
+      "status": 200
+    }
+  ],
+  "data": {
+    "type": "flight-offers-pricing",
+    "flightOffers": [
+      {
+        "type": "flight-offer",
+        "id": "1",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "paymentCardRequired": false,
+        "lastTicketingDate": "2023-11-14",
+        "itineraries": [
+          {
+            "segments": [
+              {
+                "departure": {
+                  "iataCode": "MIA",
+                  "at": "2023-11-14T13:47:00"
+                },
+                "arrival": {
+                  "iataCode": "IAD",
+                  "at": "2023-11-14T16:25:00"
+                },
+                "carrierCode": "UA",
+                "number": "1938",
+                "aircraft": {
+                  "code": "73G"
+                },
+                "operating": {
+                  "carrierCode": "UA"
+                },
+                "duration": "PT2H38M",
+                "id": "13",
+                "numberOfStops": 0,
+                "co2Emissions": [
+                  {
+                    "weight": 133,
+                    "weightUnit": "KG",
+                    "cabin": "ECONOMY"
+                  }
+                ]
+              },
+              {
+                "departure": {
+                  "iataCode": "IAD",
+                  "at": "2023-11-14T17:35:00"
+                },
+                "arrival": {
+                  "iataCode": "ROA",
+                  "at": "2023-11-14T18:38:00"
+                },
+                "carrierCode": "UA",
+                "number": "4339",
+                "aircraft": {
+                  "code": "ERJ"
+                },
+                "operating": {
+                  "carrierCode": "UA"
+                },
+                "duration": "PT1H3M",
+                "id": "14",
+                "numberOfStops": 0,
+                "co2Emissions": [
+                  {
+                    "weight": 85,
+                    "weightUnit": "KG",
+                    "cabin": "ECONOMY"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "segments": [
+              {
+                "departure": {
+                  "iataCode": "ROA",
+                  "at": "2023-12-21T19:31:00"
+                },
+                "arrival": {
+                  "iataCode": "IAD",
+                  "at": "2023-12-21T20:38:00"
+                },
+                "carrierCode": "UA",
+                "number": "4827",
+                "aircraft": {
+                  "code": "ERJ"
+                },
+                "operating": {
+                  "carrierCode": "UA"
+                },
+                "duration": "PT1H7M",
+                "id": "15",
+                "numberOfStops": 0,
+                "co2Emissions": [
+                  {
+                    "weight": 85,
+                    "weightUnit": "KG",
+                    "cabin": "ECONOMY"
+                  }
+                ]
+              },
+              {
+                "departure": {
+                  "iataCode": "IAD",
+                  "at": "2023-12-22T08:30:00"
+                },
+                "arrival": {
+                  "iataCode": "MIA",
+                  "at": "2023-12-22T11:21:00"
+                },
+                "carrierCode": "UA",
+                "number": "1073",
+                "aircraft": {
+                  "code": "73G"
+                },
+                "operating": {
+                  "carrierCode": "UA"
+                },
+                "duration": "PT2H51M",
+                "id": "16",
+                "numberOfStops": 0,
+                "co2Emissions": [
+                  {
+                    "weight": 135,
+                    "weightUnit": "KG",
+                    "cabin": "ECONOMY"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "price": {
+          "currency": "USD",
+          "total": "712.37",
+          "base": "617.67",
+          "fees": [
+            {
+              "amount": "0.00",
+              "type": "SUPPLIER"
+            },
+            {
+              "amount": "0.00",
+              "type": "TICKETING"
+            },
+            {
+              "amount": "0.00",
+              "type": "FORM_OF_PAYMENT"
+            }
+          ],
+          "grandTotal": "712.37",
+          "billingCurrency": "USD"
+        },
+        "pricingOptions": {
+          "fareType": [
+            "PUBLISHED"
+          ],
+          "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+          "UA"
+        ],
+        "travelerPricings": [
+          {
+            "travelerId": "1",
+            "fareOption": "STANDARD",
+            "travelerType": "ADULT",
+            "price": {
+              "currency": "USD",
+              "total": "712.37",
+              "base": "617.67",
+              "taxes": [
+                {
+                  "amount": "19.20",
+                  "code": "ZP"
+                },
+                {
+                  "amount": "11.20",
+                  "code": "AY"
+                },
+                {
+                  "amount": "46.30",
+                  "code": "US"
+                },
+                {
+                  "amount": "18.00",
+                  "code": "XF"
+                }
+              ],
+              "refundableTaxes": "11.20"
+            },
+            "fareDetailsBySegment": [
+              {
+                "segmentId": "13",
+                "cabin": "ECONOMY",
+                "fareBasis": "SFA0PFEN",
+                "brandedFare": "ECONOMY",
+                "class": "S",
+                "includedCheckedBags": {
+                  "quantity": 0
+                }
+              },
+              {
+                "segmentId": "14",
+                "cabin": "ECONOMY",
+                "fareBasis": "SFA0PFEN",
+                "brandedFare": "ECONOMY",
+                "class": "S",
+                "includedCheckedBags": {
+                  "quantity": 0
+                }
+              },
+              {
+                "segmentId": "15",
+                "cabin": "ECONOMY",
+                "fareBasis": "KFA2ADDN",
+                "brandedFare": "ECONOMY",
+                "class": "K",
+                "includedCheckedBags": {
+                  "quantity": 0
+                }
+              },
+              {
+                "segmentId": "16",
+                "cabin": "ECONOMY",
+                "fareBasis": "HAA0OFEN",
+                "brandedFare": "ECONOMY",
+                "class": "H",
+                "includedCheckedBags": {
+                  "quantity": 0
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "bookingRequirements": {
+      "emailAddressRequired": true,
+      "mobilePhoneNumberRequired": true,
+      "travelerRequirements": [
+        {
+          "travelerId": "1",
+          "genderRequired": true,
+          "dateOfBirthRequired": true,
+          "redressRequiredIfAny": true,
+          "residenceRequired": true
+        }
+      ]
+    }
+  },
+  "dictionaries": {
+    "locations": {
+      "MIA": {
+        "cityCode": "MIA",
+        "countryCode": "US"
+      },
+      "ROA": {
+        "cityCode": "ROA",
+        "countryCode": "US"
+      },
+      "IAD": {
+        "cityCode": "WAS",
+        "countryCode": "US"
+      }
+    }
+  }
+}
