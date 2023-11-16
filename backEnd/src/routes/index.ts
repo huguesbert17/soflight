@@ -51,7 +51,7 @@ router.get('/api/flight-offers', async (req, res, next) => {
 
     if (query?.returnDate && !moment(query?.returnDate).isValid()) errors = {...errors, returnDate: "Return date is missing or invalid."}
 
-    if (!moment(query.when).utc().isSameOrAfter()) errors = {...errors, when: `Travel date should not be in the past ${query.when}.`}
+    if (!moment(query.when).utc().isSameOrAfter(moment(query.when).utc())) errors = {...errors, when: `Travel date should not be in the past ${query.when}.`}
 
     if (query?.returnDate && !moment(query.returnDate).utc().isSameOrAfter(query.when)) errors = {...errors, returnDate: "Return date should not be in the past or before departure's date."}
 
