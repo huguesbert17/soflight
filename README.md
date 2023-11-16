@@ -20,3 +20,6 @@ Open [http://localhost:3000](http://localhost:3000).
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
+
+![alt text](https://github.com/huguesbert17/soflight/blob/main/success.png?raw=true)
+
