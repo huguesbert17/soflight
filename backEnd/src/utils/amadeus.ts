@@ -3,10 +3,10 @@ const {getClient} = require("./redis")
 
 
 const token = async () => {
-    const redis = await getClient()
-    const token = await redis.get("AMADEUS_TOKEN");
+    // const redis = await getClient()
+    // const token = await redis.get("AMADEUS_TOKEN");
 
-    if (token) return JSON.parse(token)
+    // if (token) return JSON.parse(token)
 
     // @ts-ignore
     const api = await axios.post(process.env.AMADEUS_AUTH_TEST_API_URL,
@@ -17,15 +17,15 @@ const token = async () => {
             }
         })
 
-    redis.set( "AMADEUS_TOKEN", JSON.stringify(api.data), {
-        EX: api.data.expires_in
-    } );
+    // redis.set( "AMADEUS_TOKEN", JSON.stringify(api.data), {
+    //     EX: api.data.expires_in
+    // } );
 
     return api.data
 }
 
-const airports = async (name: string, page: number = 1) => {
-    const _token = await token()
+const airports = async (token: string, name: string, page: number = 1) => {
+    // const _token = await token()
     const response = await axios.get(`${process.env.AMADEUS_API_TEST_URL}/v1/reference-data/locations`, {
         params: {
             keyword: name,
@@ -33,7 +33,7 @@ const airports = async (name: string, page: number = 1) => {
             //"page": page * 10
         },
         headers: {
-            Authorization: 'Bearer ' + _token.access_token
+            Authorization: token
         }
     });
 
@@ -55,46 +55,43 @@ type ICriteria = {
     maxPrice?: number
     max?: number
 }
-const deals = async (criteria: ICriteria, cabinClass = ["ECONOMY", "PREMIUM_ECONOMY", "BUSINESS", "FIRST"]) => {
-    const _token = await token()
+const deals = async (token: string, criteria: ICriteria, cabinClass = ["ECONOMY", "PREMIUM_ECONOMY", "BUSINESS", "FIRST"]) => {
 
     const response = await axios.get(`${process.env.AMADEUS_API_TEST_URL}v2/shopping/flight-offers`, {
         params: {...criteria},
         headers: {
-            'Authorization': 'Bearer ' + _token.access_token
+            'Authorization': token
         }
     });
 
     return response.data
 }
-const confirmOffer = async (offer: any) => {
-    const _token = await token()
+const confirmOffer = async (token: string, offer: any) => {
 
     const response = await axios.post(`${process.env.AMADEUS_API_TEST_URL}v1/shopping/flight-offers/pricing`, {
         data: {
             type: "flight-offers-pricing",
-            flightOffers: [offer]
+            flightOffers: [offer.offer]
         }
     }, {
         headers: {
-            'Authorization': 'Bearer ' + _token.access_token,
+            'Authorization': token,
             'X-HTTP-Method-Override': 'POST'
         }
     });
 
     return response.data
 }
-const bookFlight = async (offer: any) => {
-    const _token = await token()
+const bookFlight = async (token: string, offer: any) => {
 
     const response = await axios.post(`${process.env.AMADEUS_API_TEST_URL}v1/booking/flight-orders`, {
         data: {
             type: "flight-order",
-            ...offer
+            ...offer.flightOffer
         }
     }, {
         headers: {
-            'Authorization': 'Bearer ' + _token.access_token,
+            'Authorization': token,
             'X-HTTP-Method-Override': 'POST'
         }
     });

@@ -1,6 +1,9 @@
 import React, {createContext, FC, ReactNode, useEffect, useReducer} from "react";
 import useAuth from "../hooks/useAuth";
 
+import {API_URL} from "../utils/constants";
+import axios from "axios";
+
 interface IState {
     apiToken: string
 }
@@ -31,7 +34,9 @@ export const AppContextProvider: FC<IProps> = (props) => {
         {getToken} = useAuth()
 
     useEffect(() => {
-        // getToken().then(rep => dispatch({type: "SET_TOKEN", payload: rep.token}))
+        getToken().then(rep => {
+            dispatch({type: "SET_TOKEN", payload: rep.token})
+        })
     }, [])
 
     return <AppContext.Provider value={{state, dispatch}}>

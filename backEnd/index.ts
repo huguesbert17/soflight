@@ -8,7 +8,7 @@ const session = require('express-session')
 dotenv.config();
 
 const sess = {
-    secret: 'keyboard cat',
+    secret: '',
     cookie: {}
 }
 

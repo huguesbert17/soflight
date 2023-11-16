@@ -1,6 +1,7 @@
 import express, { Express, Request, Response } from 'express';
 import moment from "moment";
 import fs from "fs";
+import axios from "axios";
 const {token, airports, deals, confirmOffer, bookFlight}  = require("../utils/amadeus");
 const _deals = require("./test.json")
 const booked = require("./booked.json")
@@ -14,6 +15,7 @@ const router = express.Router();
 router.get('/', (req, res, next) => {
   res.send('Welcome to Express & TypeScript Server');
 });
+
 router.get('/api/token', async (req, res, next) => {
     const _token = await token()
     res.json({
@@ -21,6 +23,7 @@ router.get('/api/token', async (req, res, next) => {
         data: _token
     }).status(200);
 });
+
 router.get('/api/airport', async (req, res, next) => {
 
     if (!req.query.name) res.json({
@@ -29,29 +32,28 @@ router.get('/api/airport', async (req, res, next) => {
     }).status(403)
 
     try {
-        const airport = await airports(req.query.name as string)
+        const airport = await airports(req.headers['authorization'], req.query.name as string)
         res.json({
             status: "success",
             data: airport.data
         }).status(200);
     }catch (e) {
         res.json({})
-        console.log(e);
     }
 });
 router.get('/api/flight-offers', async (req, res, next) => {
 
     let errors = {},
-        query: any = {...req.query}
+        query: any = req.query
 
     if (!query.when || !moment(query.when).isValid()) errors = {...errors, when: "Departure date is missing or invalid."}
 
 
     if (query?.returnDate && !moment(query?.returnDate).isValid()) errors = {...errors, returnDate: "Return date is missing or invalid."}
 
-    if (!moment(query.when, "YYYY-MM-DD").isSameOrAfter()) errors = {...errors, when: `Travel date should not be in the past ${query.when}.`}
+    if (!moment(query.when).utc().isSameOrAfter()) errors = {...errors, when: `Travel date should not be in the past ${query.when}.`}
 
-    if (query?.returnDate && !moment(query.returnDate).isSameOrAfter(query.when)) errors = {...errors, returnDate: "Return date should not be in the past or before departure's date."}
+    if (query?.returnDate && !moment(query.returnDate).utc().isSameOrAfter(query.when)) errors = {...errors, returnDate: "Return date should not be in the past or before departure's date."}
 
     if (!query?.from) errors = {...errors, from: "Origin airport is missing."}
     if (!query?.to) errors = {...errors, to: "Destination airport is missing."}
@@ -81,8 +83,9 @@ router.get('/api/flight-offers', async (req, res, next) => {
         if (!details[d]) delete details[d]
     }
 
+    // axios.defaults.headers.common['Authorization'] = req.headers['authorization']
     try {
-        const _deals = await deals(details)
+        const _deals = await deals(req.headers['authorization'], details)
         // return res.json(_deals)
         return res.json({
             status: "success",
@@ -98,8 +101,12 @@ router.get('/api/flight-offers', async (req, res, next) => {
 
 router.post('/api/flight-offers', async (req, res, next) => {
     try {
+
+        // axios.defaults.headers.common['Authorization'] = req.headers['authorization']
+
         // return res.json(booked)
-        const confirm = await confirmOffer(req.body)
+
+        const confirm = await confirmOffer(req.headers['authorization'], {...req.body})
         res.json(confirm);
     }catch (e: any) {
         return res.send({
@@ -112,7 +119,9 @@ router.post('/api/flight-offers', async (req, res, next) => {
 router.post('/api/flight-booking', async (req, res, next) => {
     try {
 
-        const confirm = await bookFlight(req.body)
+        // axios.defaults.headers.common['Authorization'] = req.headers['authorization']
+
+        const confirm = await bookFlight(req.headers['authorization'], req.body)
         // const confirm = flightBooked
         return res.json({
             status: "success",
